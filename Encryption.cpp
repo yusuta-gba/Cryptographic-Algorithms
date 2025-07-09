@@ -451,13 +451,8 @@ void Encryption::mirror(int j)
 	{ 
 		int q = 0;
 		for (int n = 1; n <= 4; n++)
-		{
 			for (int l = n - 1; l <= n; l++)
-			{
 				this->BitArrayV2[i][q++] = this->BitArray[5 * n -  4 * l - 1][i];
-			
-			}			
-		}
 	}
 
 
