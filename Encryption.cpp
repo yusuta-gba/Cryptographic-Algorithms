@@ -351,36 +351,33 @@ bool Encryption::linearGetBits(int v2)
 
 void Encryption::select( int j)
 { 
-	for (int i = j; i<j+8; i++)
-	{
-		if (i <= 3)																			// Refactored
+
+		for (int i = j; i < j + 8; i++)
 		{
-			this->BitArrayV3[0][i] = this->BitArrayV2[8 - 2][7 - 1 - 2 * i];
-			this->BitArrayV3[1][i] = this->BitArrayV2[8 - 4][7 - 1 - 2 * i];
-			this->BitArrayV3[2][i] = this->BitArrayV2[8 - 6][7 - 1 - 2 * i];
-			this->BitArrayV3[3][i] = this->BitArrayV2[8 - 8][7 - 1 - 2 * i];
-			this->BitArrayV3[4][i] = this->BitArrayV2[8 - 1][7 - 1 - 2 * i];
-			this->BitArrayV3[5][i] = this->BitArrayV2[8 - 3][7 - 1 - 2 * i];
-			this->BitArrayV3[6][i] = this->BitArrayV2[8 - 5][7 - 1 - 2 * i];
-			this->BitArrayV3[7][i] = this->BitArrayV2[8 - 7][7 - 1 - 2 * i];
-		}
-		else
-		{
+			int q = 0;
 			
-				this->BitArrayV3[0][i] = this->BitArrayV2[8 - 2][7 - (i % 4) * 2];
-				this->BitArrayV3[1][i] = this->BitArrayV2[8 - 4][7 - (i % 4) * 2];
-				this->BitArrayV3[2][i] = this->BitArrayV2[8 - 6][7 - (i % 4) * 2];
-				this->BitArrayV3[3][i] = this->BitArrayV2[8 - 8][7 - (i % 4) * 2];
-				this->BitArrayV3[4][i] = this->BitArrayV2[8 - 1][7 - (i % 4) * 2];
-				this->BitArrayV3[5][i] = this->BitArrayV2[8 - 3][7 - (i % 4) * 2];
-				this->BitArrayV3[6][i] = this->BitArrayV2[8 - 5][7 - (i % 4) * 2];
-				this->BitArrayV3[7][i] = this->BitArrayV2[8 - 7][7 - (i % 4) * 2];
-			
-		
+			for (int x = 0; x <= 1; x++)
+			{
+				for (int z = 1; z <= 4;z++)
+				{
+
+					if (i <= 3)																			// Refactored
+					{
+						this->BitArrayV3[q][i] = this->BitArrayV2[8 - ( 2 * z - x )][7 - 1 - 2 * i];
+
+					}
+					else
+					{
+						this->BitArrayV3[q][i] = this->BitArrayV2[8 - (2 * z - x)][7 - (i % 4) * 2];
+					}
+					q++;
+				}
+			}
+
 		}
 		
 		
-	}
+	
 
 	
 	
