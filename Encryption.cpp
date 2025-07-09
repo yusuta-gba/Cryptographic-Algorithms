@@ -354,17 +354,14 @@ void Encryption::select( int j)
 
 		for (int i = j; i < j + 8; i++)
 		{
-			int q = 0;
-			
+			int q = 0;	
 			for (int x = 0; x <= 1; x++)
 			{
 				for (int z = 1; z <= 4;z++)
 				{
-
 					if (i <= 3)																			// Refactored
 					{
 						this->BitArrayV3[q][i] = this->BitArrayV2[8 - ( 2 * z - x )][7 - 1 - 2 * i];
-
 					}
 					else
 					{
@@ -373,7 +370,6 @@ void Encryption::select( int j)
 					q++;
 				}
 			}
-
 		}
 		
 		
@@ -452,15 +448,17 @@ void Encryption::mirror(int j)
 	
 		
 	for (int i = j; i < j+8; i++)
-	{
-		this->BitArrayV2[i][1 - 1] = this->BitArray[5-1][i];
-		this->BitArrayV2[i][2 - 1] = this->BitArray[1-1][i];
-		this->BitArrayV2[i][3 - 1] = this->BitArray[6-1][i];
-		this->BitArrayV2[i][4 - 1] = this->BitArray[2-1][i];
-		this->BitArrayV2[i][5 - 1] = this->BitArray[7-1][i];
-		this->BitArrayV2[i][6 - 1] = this->BitArray[3-1][i];
-		this->BitArrayV2[i][7 - 1] = this->BitArray[8-1][i];
-		this->BitArrayV2[i][8 - 1] = this->BitArray[4-1][i];
+	{ 
+		int q = 0;
+		for (int n = 1; n <= 4; n++)
+		{
+			for (int l = n - 1; l <= n; l++)
+			{
+				this->BitArrayV2[i][q] = this->BitArray[5 * n -  4 * l - 1][i];
+				q++;
+			}
+			
+		}
 
 		//if (i == 3)
 		//	cout  << this->BitArrayV2[3][8-1] <<  " FOUND " << this->BitArray[3][i] << endl;
