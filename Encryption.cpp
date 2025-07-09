@@ -454,14 +454,10 @@ void Encryption::mirror(int j)
 		{
 			for (int l = n - 1; l <= n; l++)
 			{
-				this->BitArrayV2[i][q] = this->BitArray[5 * n -  4 * l - 1][i];
-				q++;
-			}
+				this->BitArrayV2[i][q++] = this->BitArray[5 * n -  4 * l - 1][i];
 			
+			}			
 		}
-
-		//if (i == 3)
-		//	cout  << this->BitArrayV2[3][8-1] <<  " FOUND " << this->BitArray[3][i] << endl;
 	}
 
 
