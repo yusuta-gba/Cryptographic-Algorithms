@@ -26,5 +26,11 @@ There are my research results about Cryptography and some Coding Standards
         <p> Initialization of Salsa20 <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Algo.pdf">Converting Integers to 32-Bit</a>.</p>
     </embed>
 </object>
+
+<object data="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.pdf">
+        <p> Zahlengenerator-1256 <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.cpp">1256-C++</a>.</p>
+    </embed>
+</object>
   
 
