@@ -27,24 +27,16 @@ int main(char argv[], int argc)
 
 for( j; j<=4; j++)
 { 
-  if( j == 2) 
-  line[i] = joker[j] -  joker[j -2];
- 
-   if ( j == 3)
-   {  cout << "j: " <<  j << " -> " <<	 joker[j] << endl;
-      line[i] = joker[j] - joker[ j - 3];
-      
-     
-  }
+      line[i] = joker[j] - joker[ j - j];
   
   if( j == 4)
   {
-    line[i] =  line[i-1] + line[i-4 - 1];
+    line[i] =  line[i-1] + line[i-j - 1];
     
   }
 
  i++;
-// j++;
+
 }
 
  for(int z = 0; z< 6; z++)
