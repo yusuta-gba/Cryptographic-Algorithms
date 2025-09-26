@@ -49,7 +49,7 @@ void loop::moduloAdd(int a[], int b[])
         {
             if(this->getIndex()  ==  this->getStart())
              {   cout << "START CASE " << endl;
-                 a[this->getIndex()] =  a[this->getIndex() - b[this->getIndex() - this->getIndex()]] + b[this->getIndex() % 3];
+                 a[this->getIndex()] =  b[this->getEnd() -this->getIndex() + b[this->getIndex() - this->getIndex()]] + b[this->getIndex() % 3];
                  cout << "START NUMBER: " << a[this->getIndex()] << endl;
              }
 
