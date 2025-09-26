@@ -35,7 +35,7 @@ void loop::subAdd(int a[], int b[])
 	
          if( this->getIndex() == this->getEnd())
            {   cout << "SPECIFIC CASE " << endl; 
-	      a[this->getIndex()] = a[this->getIndex() -b[this->getIndex() - this->getIndex()]] + b[this->getIndex() - this->getIndex()];	
+	      a[this->getIndex()] = b[this->getEnd() - this->getStart()] + b[this->getIndex() - this->getIndex()];	
               cout  << "LOCAL " << a[this->getIndex()];     
            } 
           
