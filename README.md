@@ -9,7 +9,7 @@ There are my research results about Cryptography and some Coding Standards
         <li>  Cryptanalysis-Attacks <a href=https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Cryptanalysis.cpp>Linear-Attack</a></li>
     </embed>
 </object>
-\newline
+\
 <object data="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/RC4_Encryption.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/RC4_Encryption.pdf.pdf">
         <p> Analyse von RC4-Encryption und deren Vorteil bei der Objektorientierten-Programmierung <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/RC4_Encryption.pdf">Download PDF</a>.</p>
