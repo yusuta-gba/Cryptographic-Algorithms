@@ -34,11 +34,12 @@ There are my research results about Cryptography and some Coding Standards
     </embed>
 </object>
 
-<object data="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.pdf">
+<object data="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256L.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256L.pdf">
         <p> Zahlengenerator-1256 <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.cpp">1256-C++</a>.</p>
-        <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256.pdf">1256-PDF</a>
+        <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/1256L.pdf">1256-PDF</a>
     </embed>
 </object>
   
+
 
