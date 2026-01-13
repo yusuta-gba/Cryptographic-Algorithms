@@ -10,7 +10,7 @@ int main( char * argv[], int argc)
         int line[9];
 	int joker[] = { 1, 2, 5, 6};
         l1->assign(line, joker);
-	line[l1->index] = line[l1->index - l1->index]  + line[l1->index-1];
+	line[l1->index] = line[l1->index - l1->index]  + line[l1->index-joker[l1->index - l1->index]];
         l1->incI();
         l2->index = l1->getIndex();
 	l2->subAdd(line,joker);	
