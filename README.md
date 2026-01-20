@@ -5,7 +5,7 @@ There are my research results about Cryptography and some Coding Standards
 <object data="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Permutation.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Permutation.pdf">
         <p> This is my research result about  the  Permutation of the Data-Encryption-Standard-Cipher <a href="https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Permutation (1).pdf">Download PDF</a>.</p>
-         <img src=“https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Oracle.png”>
+         <img src=https://github.com/yusuta-gba/Cryptographic-Algorithms/blob/main/Oracle.png”>
         <li>  Encryption-Techniques <a href=https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Encryption.cpp>Encryption</a></li>
         <li>  Cryptanalysis-Attacks <a href=https://github.com/yusuta-gba/Permutation-Algorithmus/blob/main/Cryptanalysis.cpp>Linear-Attack</a></li>
     </embed>
