@@ -27,7 +27,7 @@ void Cryptanalysis::tree(bool l1, bool l2, bool l3, bool l4, int stop)		// Anhan
 		encode(1, 0, 0, 0);
 		if (l1 == true)
 		{
-			encode(0,1,0,1);													// Herausfinden von zwei Offsetwerten und die Bytes in einem anderes Array laden !
+			encode(0,1,0,1);													// Herausfinden von zwei Offsetwerten und die Bytes in einem anderen Array laden !
 			this->D.ReverseOffset(this->SearchIndex);
 			this->KeyMask[2] = this->D.hexArray[this->D.a][this->D.b];			
 			this->KeyMask[3] = this->D.hexArray[this->D.a][this->D.b+1];
@@ -47,7 +47,7 @@ void Cryptanalysis::tree(bool l1, bool l2, bool l3, bool l4, int stop)		// Anhan
 		}
 		encode(2, 0, 0, 0);
 
-		if (l2 == true)														// Herausfinden von zwei Offsetwerten und die Bytes in einem anderes Array laden !
+		if (l2 == true)														// Herausfinden von zwei Offsetwerten und die Bytes in einem anderen Array laden !
 		{
 			encode(0,1,0,1);
 			this->D.ReverseOffset(this->SearchIndex);
@@ -69,7 +69,7 @@ void Cryptanalysis::tree(bool l1, bool l2, bool l3, bool l4, int stop)		// Anhan
 		if (l3 == true)
 		{
 			encode(0,1,0,1);
-			this->D.ReverseOffset(this->SearchIndex);					// Herausfinden von zwei Offsetwerten und die Bytes in einem anderes Array laden !
+			this->D.ReverseOffset(this->SearchIndex);					// Herausfinden von zwei Offsetwerten und die Bytes in einem anderen Array laden !
 			this->KeyMask[2] = this->D.hexArray[this->D.a][this->D.b];
 			this->KeyMask[3] = this->D.hexArray[this->D.a][this->D.b + 1];
 			encode(0,0,1,1);
@@ -102,4 +102,5 @@ void Cryptanalysis::tree(bool l1, bool l2, bool l3, bool l4, int stop)		// Anhan
 			encode(0, 1, 1, 1);
 		}
 }
+
 
