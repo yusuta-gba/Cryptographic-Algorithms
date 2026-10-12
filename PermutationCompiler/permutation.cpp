@@ -3,12 +3,32 @@
 #include <iostream>
 
 permutation::permutation(int * input, int n)
-{	
+{	printf("Constructor begins..\n");
 	this->size = n;
 	this->DataField = new int[n];
+	this->ResetField = new int[n];
 	this->reservedField = new bool[n];
+	this->index = 0;
+ 	this->index2 = this->index + 1;
 	this->setField(input);
+	printf("CONSTRUCTOR READY..\n");
 	return;
+}
+void permutation::reset()
+{
+	for(int i = 0; i<this->size; i++)
+	{
+		this->DataField[i] = this->ResetField[i];
+	}
+}
+void permutation::p5()
+{
+	for(int i = 0; i<this->size; i++)
+     	{	swap(i,this->size-1,this->DataField);
+     		p4();
+     		this->reset();
+	}
+     
 }
 void permutation::p4()
 {
@@ -16,10 +36,12 @@ void permutation::p4()
     for(int n2 = 0; n2 < this->size; n2++)
     {
         if(compare(n2,this->reservedField))
-        { 
+        {            // ( x, 3)
                 swap(n2, this->size-1,this->DataField);
+			// ( 0, 1, plain, 3, 0)
                 permutate(this->index,this->index2,this->DataField,this->size-1,this->functionCallerCounter);
-                fill(this->DataField[this->size-1],this->reservedField);
+                
+		fill(this->DataField[this->size-1] - 1,this->reservedField);
                 n2 = -1;
                 if(this->counter ==4)
                         break;
@@ -27,6 +49,11 @@ void permutation::p4()
         }
 
     }	
+
+//	for(int j = 0; j< this->size; j++)
+//	{
+//		printf(" %d ", this->reservedField[j]);
+//	}
 }
 void permutation::setField(int *input)
 {
@@ -40,6 +67,7 @@ void permutation::setField(int *input)
 	{
 		
 		this->DataField[j] = input[j];
+		this->ResetField[j] = input[j];
 		this->reservedField[j] = false;
 	}
 	return;
@@ -66,8 +94,11 @@ bool permutation::compare(int n, bool * B)
 }
 void permutation::fill(int a, bool * B)
 {
-  B[a] = true;
-  this->counter++;
+//  printf(" %d.. \n",this->DataField[a]);
+       if(B[a] == false)
+	{ B[a] = true;
+  	 this->counter++;
+	}
   return;
 
 }
@@ -94,7 +125,7 @@ void permutation::permutate(int i, int j, int * A, int n, int fn)
 	  return;
    }
    swap(i,j,A);
- for( int c = 0; c<4; c++)
+ for( int c = 0; c<this->size; c++)
     {
         printf("%d", A[c]);
     }
