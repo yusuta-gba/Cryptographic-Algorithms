@@ -19,10 +19,14 @@ void permutation::reset()
 	for(int i = 0; i<this->size; i++)
 	{
 		this->DataField[i] = this->ResetField[i];
+		this->reservedField[i] = false;
 	}
+		this->counter=0;
 }
 void permutation::p5()
 {
+//	p4();
+//	this->reset();
 	for(int i = 0; i<this->size; i++)
      	{	swap(i,this->size-1,this->DataField);
      		p4();
@@ -32,16 +36,16 @@ void permutation::p5()
 }
 void permutation::p4()
 {
-	 
-    for(int n2 = 0; n2 < this->size; n2++)
+//	printf(" : : : : : : : p4 called : : : : : : :\n");	 
+    for(int n2 = 0; n2 < 4; n2++)
     {
         if(compare(n2,this->reservedField))
         {            // ( x, 3)
-                swap(n2, this->size-1,this->DataField);
+                swap(n2, 3,this->DataField);
 			// ( 0, 1, plain, 3, 0)
-                permutate(this->index,this->index2,this->DataField,this->size-1,this->functionCallerCounter);
+                permutate(this->index,this->index2,this->DataField,3,this->functionCallerCounter);
                 
-		fill(this->DataField[this->size-1] - 1,this->reservedField);
+		fill(this->DataField[3] - 1,this->reservedField);
                 n2 = -1;
                 if(this->counter ==4)
                         break;
