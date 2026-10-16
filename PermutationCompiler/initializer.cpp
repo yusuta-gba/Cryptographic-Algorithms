@@ -25,7 +25,7 @@ int main(char * argv[], int argc)
 	for(int j = p1; j>=6; j--)
 	{
 		temp = func;
-		temp+=to_string(j);
+		temp+=to_string(j - 1);
 	string append_cpp = "void permutation::p" + to_string(j) + "(){ \n for(int i = 0; i<this->size; i++) { \n 	swap(i,this->size-1,this->DataField);"  + temp + "();"  + "\n this->reset(); } }";
 		mein_file2 << append_cpp << endl;
 	}

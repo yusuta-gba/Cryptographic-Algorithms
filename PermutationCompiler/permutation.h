@@ -25,6 +25,8 @@ class permutation
 		/*												  *
 		 *												  *
 		 * Um die anderen Permutations-Funktionen für größere Arrays als C++Funktion zu generieren lassen */
+
+
 void p9();
 void p8();
 void p7();

@@ -158,20 +158,19 @@ void permutation::permutate(int i, int j, int * A, int n, int fn)
 
 }
 
-
 void permutation::p9(){ 
- for(int i = 0; i<this->size; i++) { 
- 	swap(i,this->size-1,this->DataField);p9();
- this->reset(); } }
-void permutation::p8(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-1,this->DataField);p8();
  this->reset(); } }
-void permutation::p7(){ 
+void permutation::p8(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-1,this->DataField);p7();
  this->reset(); } }
-void permutation::p6(){ 
+void permutation::p7(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-1,this->DataField);p6();
+ this->reset(); } }
+void permutation::p6(){ 
+ for(int i = 0; i<this->size; i++) { 
+ 	swap(i,this->size-1,this->DataField);p5();
  this->reset(); } }
