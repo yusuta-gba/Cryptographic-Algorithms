@@ -1,7 +1,7 @@
 #include "permutation.h"
 #include  <stdio.h>
 #include <iostream>
-
+#include <cstdio>
 permutation::permutation(int * input, int n)
 {	printf("Constructor begins..\n");
 	this->size = n;
@@ -116,7 +116,7 @@ void permutation::swap(int i, int j, int * A)
 void permutation::permutate(int i, int j, int * A, int n, int fn)
 {
   int q2 = n;
-
+	printf("%d %d, %02x, %d, %d\n");
   for( int q = n - 1; q>=1; q--)
   {
        q2 = q2 * q;
@@ -157,3 +157,21 @@ void permutation::permutate(int i, int j, int * A, int n, int fn)
         return;
 
 }
+
+
+void permutation::p9(){ 
+ for(int i = 0; i<this->size; i++) { 
+ 	swap(i,this->size-1,this->DataField);p9();
+ this->reset(); } }
+void permutation::p8(){ 
+ for(int i = 0; i<this->size; i++) { 
+ 	swap(i,this->size-1,this->DataField);p8();
+ this->reset(); } }
+void permutation::p7(){ 
+ for(int i = 0; i<this->size; i++) { 
+ 	swap(i,this->size-1,this->DataField);p7();
+ this->reset(); } }
+void permutation::p6(){ 
+ for(int i = 0; i<this->size; i++) { 
+ 	swap(i,this->size-1,this->DataField);p6();
+ this->reset(); } }

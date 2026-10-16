@@ -20,4 +20,13 @@ class permutation
 	void swap(int i, int j, int * A);
 	void fill(int a, bool * B);
 	bool compare(int n, bool * B);
+
+// };		Dieses Zeichen automatisch von dem Makefile hinzufügen lassen.
+		/*												  *
+		 *												  *
+		 * Um die anderen Permutations-Funktionen für größere Arrays als C++Funktion zu generieren lassen */
+void p9();
+void p8();
+void p7();
+void p6();
 };
