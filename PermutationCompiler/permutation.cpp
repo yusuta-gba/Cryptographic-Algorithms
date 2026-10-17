@@ -162,20 +162,34 @@ void permutation::permutate(int i, int j, int * A, int n, int fn)
         return;
 
 }
-// Wenn im Array 9 Elemente es gibt, kann dies funktionieren !! Soll dies eigentlich im Konstruktor konfiguriert werden..
+/* Wenn im Array 9 Elemente es gibt, kann dies funktionieren !! Soll dies eigentlich im Konstruktor konfiguriert werden.. Die
+Idee ist Function-Pointer zu verwenden, sodass der Aufruf dieser Funktion in einer
+verketten-Liste geschieht. */
 void permutation::p9(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-2,this->DataField);p4();
- this->reset(); } }
+ this->reset(); 
+}
+ p8();
+ }
 void permutation::p8(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-3,this->DataField);p4();
- this->reset(); } }
+ this->reset(); 
+}
+ p7();
+ }
 void permutation::p7(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-4,this->DataField);p4();
- this->reset(); } }
+ this->reset(); 
+} 
+p6();
+}
 void permutation::p6(){ 
  for(int i = 0; i<this->size; i++) { 
  	swap(i,this->size-5,this->DataField);p4();
- this->reset(); } }
+ this->reset();
+  }
+  p5();
+ }
