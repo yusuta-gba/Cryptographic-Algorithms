@@ -8,7 +8,8 @@ class permutation
 	bool * reservedField;
 	int    functionCallerCounter;
 	int    index = 0;
-	int    index2 =1;	
+	int    index2 =1;
+	int    countsCombination;	
 	public:
 	permutation(int * input, int n);
 	void setField(int * input);
@@ -19,6 +20,7 @@ class permutation
 	void permutate(int i, int j, int * A, int n, int fn);
 	void swap(int i, int j, int * A);
 	void fill(int a, bool * B);
+	void  faculty();
 	bool compare(int n, bool * B);
 
 // };		Dieses Zeichen automatisch von dem Makefile hinzufügen lassen.

@@ -11,8 +11,19 @@ permutation::permutation(int * input, int n)
 	this->index = 0;
  	this->index2 = this->index + 1;
 	this->setField(input);
+	this->faculty();
 	printf("CONSTRUCTOR READY..\n");
 	return;
+}
+void permutation::faculty()
+{
+	this->countsCombination = this->size;
+	printf("%d %d, %02x, %d, %d\n");
+  for( int q = this->size - 1; q>=1; q--)
+  {
+      this->countsCombination = this->countsCombination * q;
+
+  }
 }
 void permutation::reset()
 {
@@ -115,15 +126,9 @@ void permutation::swap(int i, int j, int * A)
 }
 void permutation::permutate(int i, int j, int * A, int n, int fn)
 {
-  int q2 = n;
-	printf("%d %d, %02x, %d, %d\n");
-  for( int q = n - 1; q>=1; q--)
-  {
-       q2 = q2 * q;
+  
 
-  }
-
-   if(  i ==j || fn == q2)
+   if(  i ==j || fn == this->countsCombination)
    {   
 	  this->functionCallerCounter = 0;
 	  return;
