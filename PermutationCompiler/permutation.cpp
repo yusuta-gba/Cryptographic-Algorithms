@@ -162,20 +162,20 @@ void permutation::permutate(int i, int j, int * A, int n, int fn)
         return;
 
 }
-
+// Wenn im Array 9 Elemente es gibt, kann dies funktionieren !! Soll dies eigentlich im Konstruktor konfiguriert werden..
 void permutation::p9(){ 
  for(int i = 0; i<this->size; i++) { 
- 	swap(i,this->size-1,this->DataField);p8();
+ 	swap(i,this->size-2,this->DataField);p4();
  this->reset(); } }
 void permutation::p8(){ 
  for(int i = 0; i<this->size; i++) { 
- 	swap(i,this->size-1,this->DataField);p7();
+ 	swap(i,this->size-3,this->DataField);p4();
  this->reset(); } }
 void permutation::p7(){ 
  for(int i = 0; i<this->size; i++) { 
- 	swap(i,this->size-1,this->DataField);p6();
+ 	swap(i,this->size-4,this->DataField);p4();
  this->reset(); } }
 void permutation::p6(){ 
  for(int i = 0; i<this->size; i++) { 
- 	swap(i,this->size-1,this->DataField);p5();
+ 	swap(i,this->size-5,this->DataField);p4();
  this->reset(); } }
